@@ -26,3 +26,8 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+
+div {
+  background: var(--ion-color-favorite);
+  color: var(--ion-color-favorite-contrast);
+}
