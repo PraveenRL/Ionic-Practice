@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <form [formGroup]="myForm" (ngSubmit)="createPdf()">
+    <ion-item>
+      <ion-label>Include Logo Image ?</ion-label>
+      <ion-input formControlName="showLogo" slot="start"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">From</ion-label>
+      <ion-input formControlName="from" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">To</ion-label>
+      <ion-input formControlName="to" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Text</ion-label>
+      <ion-textarea formControlName="text" rows="3"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="full" color="primary" type="submit">
+      Create PDF
+    </ion-button>
+  </form>
+
+  <ion-img [src]="photoPreview" *ngIf="photoPreview"></ion-img>
+
+  <ion-button (click)="takePicture()" expand="block" color="tertiary">
+    Add Picture
+  </ion-button>
+
+  <ion-button (click)="downloadPdf()" expand="block" color="secondary" [disabled]="!pdfObj">
+    Save PDF
+  </ion-button>
+
+</ion-content>

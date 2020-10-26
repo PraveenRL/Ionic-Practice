@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-forms-6e233": {
+      "hosting": {
+        "app": [
+          "angular-forms-6e233"
+        ]
+      }
+    }
+  }
+}
